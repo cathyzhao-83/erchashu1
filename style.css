@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f8ff;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+.input-section, .traversal-section, .analysis-section, .property-section, .path-section, .visual-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    margin-left: 10px;
+    padding: 5px 10px;
+}
