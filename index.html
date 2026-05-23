@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>二叉树可视化分析器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>二叉树可视化分析器</h1>
+
+    <div class="input-section">
+        <label>输入二叉树数据（层序，用 null 表示空节点）:</label>
+        <input id="treeData" placeholder='例: [8,4,12,2,6,10,14,null,null,5,7]' size="50">
+        <button onclick="buildTree()">构建二叉树</button>
+    </div>
+
+    <div class="traversal-section">
+        <h2>遍历结果</h2>
+        <p>前序遍历: <span id="preorder"></span></p>
+        <p>中序遍历: <span id="inorder"></span></p>
+        <p>后序遍历: <span id="postorder"></span></p>
+        <p>层序遍历: <span id="levelorder"></span></p>
+    </div>
+
+    <div class="analysis-section">
+        <h2>结构分析</h2>
+        <p>节点总数: <span id="totalNodes"></span></p>
+        <p>叶子节点数量: <span id="leafNodes"></span></p>
+        <p>树的高度: <span id="height"></span></p>
+        <p>每层节点数量: <span id="nodesPerLevel"></span></p>
+        <p>最大宽度: <span id="maxWidth"></span></p>
+    </div>
+
+    <div class="property-section">
+        <h2>树的性质判断</h2>
+        <p>是否为空树: <span id="isEmpty"></span></p>
+        <p>是否为满二叉树: <span id="isFull"></span></p>
+        <p>是否为完全二叉树: <span id="isComplete"></span></p>
+        <p>是否为平衡二叉树: <span id="isBalanced"></span></p>
+        <p>是否为二叉搜索树: <span id="isBST"></span></p>
+    </div>
+
+    <div class="path-section">
+        <h2>路径查询</h2>
+        <label>输入目标值:</label>
+        <input id="targetValue" size="10">
+        <button onclick="searchValue()">查询</button>
+        <p>是否存在: <span id="exists"></span></p>
+        <p>路径: <span id="path"></span></p>
+        <p>所在层数: <span id="level"></span></p>
+    </div>
+
+    <div class="visual-section">
+        <h2>树形可视化</h2>
+        <pre id="treeVisual"></pre>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
